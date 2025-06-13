@@ -1,5 +1,16 @@
 # starbooks_management
 
+# Frontend
+- npm install
+- npm install axios react-router-dom
+
+**Back End**
+- npm init -y
+**Install required packages**
+- npm install express pg cors
+- npm install bcrypt
+
+
 
 **To-Do Backend**
 1. login auth
