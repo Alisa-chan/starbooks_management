@@ -1,12 +1,12 @@
 # starbooks_management
 
-# Frontend
+ **Frontend**
 - npm install
 - npm install axios react-router-dom
 
 **Back End**
 - npm init -y
-**Install required packages**
+**Backend packages**
 - npm install express pg cors
 - npm install bcrypt
 
