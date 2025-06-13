@@ -4,9 +4,8 @@
 - npm install
 - npm install axios react-router-dom
 
-**Back End**
-- npm init -y
 **Backend packages**
+- npm init -y
 - npm install express pg cors
 - npm install bcrypt
 
