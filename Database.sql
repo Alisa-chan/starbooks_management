@@ -28,3 +28,18 @@ VALUES ('it@gmail.com', 'it123', 'it');
 
 
 --Still not encrypted just testing yet
+
+
+
+
+-- Initial 
+CREATE TABLE name (
+    school_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    school_name VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    phone_number VARCHAR(20),
+    province VARCHAR(100),
+    municipality VARCHAR(100),
+    unit_code VARCHAR(50),
+    established_year INT CHECK (established_year >= 1800 AND established_year <= EXTRACT(YEAR FROM CURRENT_DATE))
+);
