@@ -1,4 +1,4 @@
-# Steps i made in the Database
+# Steps i did in the Database
 
 **1. Create the user**
 - CREATE USER dost WITH PASSWORD 'd0stregi0n1' CREATEDB;
