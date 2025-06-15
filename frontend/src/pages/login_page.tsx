@@ -20,7 +20,20 @@ function Login() {
 
       if (res.data.success) {
         alert("Login successful!");
-        navigate("/dashboard");
+
+        // Redirect based on user role
+        switch (res.data.role) {
+          case "admin":
+            navigate("/admin_dashboard");
+            break;
+          case "it":
+            navigate("/it_super_admin");
+            break;
+          case "user":
+          default:
+            navigate("/users_dashboard");
+            break;
+        }
       } else {
         setError(res.data.message);
       }

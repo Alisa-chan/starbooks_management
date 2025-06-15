@@ -1,9 +1,9 @@
-function Dashboard() {
+function AdminDashboard() {
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>Welcome to the Dashboard!</h1>
+      <h1>Welcome to the Admin Dashboard!</h1>
     </div>
   );
 }
 
-export default Dashboard;
+export default AdminDashboard;
