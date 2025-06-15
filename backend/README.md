@@ -26,5 +26,9 @@
 ├── frontend/
 │   ├── public/
 │   └── src/
-│
+│        └── pages/
+│             └── admin_dashboard.tsx
+│              └── it_super_admin.tsx
+│              └── login_page.tsx
+│              └── users_dashboard.tsx
 └── README.md
