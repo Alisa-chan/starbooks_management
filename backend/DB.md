@@ -16,3 +16,15 @@
 
 ### Quick start
 - psql -U postgres -d dost
+
+**Just in case psql stop**
+- sudo systemctl start postgresql sudo systemctl enable postgresql
+
+**Delete User**
+- USER DROP ROLE username;
+
+**Drop/Delete Table**
+- DROP TABLE users;
+
+**Show table**
+- SELECT * FROM users;
