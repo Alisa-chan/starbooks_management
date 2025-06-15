@@ -18,7 +18,6 @@ const pool = new Pool({
   port: 5432,
 });
 
-
 // Test route
 app.get("/", (req, res) => {
   res.send("API is running.");
@@ -35,7 +34,12 @@ app.post("/login", async (req, res) => {
     );
 
     if (result.rows.length > 0) {
-      res.json({ success: true, message: "Login successful" });
+      const user = result.rows[0];
+      res.json({
+        success: true,
+        message: "Login successful",
+        role: user.user_role,
+      });
     } else {
       res.json({ success: false, message: "Invalid credentials" });
     }
