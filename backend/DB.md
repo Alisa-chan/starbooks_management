@@ -28,3 +28,6 @@
 
 **Show table**
 - SELECT * FROM users;
+
+**Delete Row in table**
+- DELETE FROM name WHERE school_id = 1;
