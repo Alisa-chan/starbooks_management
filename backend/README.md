@@ -3,6 +3,8 @@
  **Frontend**
 - npm install
 - npm install axios react-router-dom
+- npm create vite@latest frontend -- --template react-ts
+
 
 **Backend packages**
 - npm init -y
