@@ -1,9 +1,10 @@
 # starbooks_management
 
  **Frontend**
+- npm create vite@latest frontend -- --template react-ts
 - npm install
 - npm install axios react-router-dom
-- npm create vite@latest frontend -- --template react-ts
+
 
 
 **Backend packages**
