@@ -34,7 +34,7 @@ VALUES ('it@gmail.com', 'it123', 'it');
 
 -- Initial 
 CREATE TABLE name (
-    school_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    school_id SERIAL PRIMARY KEY,
     school_name VARCHAR(255) NOT NULL,
     address TEXT NOT NULL,
     phone_number VARCHAR(20),
