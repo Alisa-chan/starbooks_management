@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "../utils/axiosInstance";
 
 function Login() {
   const navigate = useNavigate();
@@ -13,13 +13,14 @@ function Login() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/login", {
+      const res = await axios.post("/auth/login", {
         email,
         password,
       });
 
       if (res.data.success) {
-        alert("Login successful!");
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("role", res.data.role);
 
         // Redirect based on user role
         switch (res.data.role) {
