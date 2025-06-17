@@ -24,14 +24,28 @@
 
 **File Structure**
 ├── backend/
-│    └── main.js
+│   ├── config/
+│   │   └── db.js                 
+│   ├── middleware/
+│   │   ├── auth.js              
+│   │   └── role.js              
+│   ├── routes/
+│   │   ├── auth.js              
+│   │   └── dashboard.js          
+│   ├── main.js                   
+│   └── .env                      
 │
 ├── frontend/
 │   ├── public/
 │   └── src/
-│        └── pages/
-│             └── admin_dashboard.tsx
-│              └── it_super_admin.tsx
-│              └── login_page.tsx
-│              └── users_dashboard.tsx
+│       ├── App.tsx               
+│       ├── pages/
+│       │   ├── admin_dashboard.tsx
+│       │   ├── it_super_admin.tsx
+│       │   ├── login_page.tsx
+│       │   └── users_dashboard.tsx
+│       └── utils/
+│           └── axiosInstance.ts 
+│           └── ProtectedRoute.tsx 
+│
 └── README.md
