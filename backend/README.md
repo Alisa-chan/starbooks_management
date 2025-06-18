@@ -4,6 +4,8 @@
 - npm create vite@latest frontend -- --template react-ts
 - npm install
 - npm install axios react-router-dom
+- npm list react-router-dom
+- npm install --save-dev @types/react-router-dom
 
 
 
