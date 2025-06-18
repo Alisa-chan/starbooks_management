@@ -7,6 +7,8 @@
 - npm list react-router-dom
 - npm install --save-dev @types/react-router-dom
 
+**To ensure all types are installed**
+- npm install --save-dev @types/react @types/react-dom
 
 
 **Backend packages**
