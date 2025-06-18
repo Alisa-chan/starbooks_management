@@ -18,9 +18,12 @@ function Login() {
         password,
       });
 
-      if (res.data.success) {
-        localStorage.setItem("token", res.data.token);
-        localStorage.setItem("role", res.data.role);
+    if (res.data.success) {
+      console.log("JWT Token:", res.data.token); // debugging
+
+         // Save the token and role to localStorage
+         localStorage.setItem("token", res.data.token);
+         localStorage.setItem("role", res.data.role);
 
         // Redirect based on user role
         switch (res.data.role) {
