@@ -7,7 +7,7 @@
 - npm list react-router-dom
 - npm install --save-dev @types/react-router-dom
 
-**To ensure all types are installed**
+**To ensure all types are installed in frontend**
 - npm install --save-dev @types/react @types/react-dom
 
 
@@ -15,6 +15,7 @@
 - npm init -y
 - npm install express pg cors
 - npm install bcrypt
+- npm install jsonwebtoken
 
 
 
