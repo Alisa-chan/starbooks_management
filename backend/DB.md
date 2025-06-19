@@ -46,3 +46,9 @@
     | Init database  | `sudo -iu postgres && initdb -D /var/lib/postgres/data` |
     | Fix ownership  | `sudo chown -R postgres:postgres /var/lib/postgres`     |
     | Enable & Start | `sudo systemctl enable --now postgresql`                |
+
+
+
+
+**For Windows**
+-  & "C:\Program Files\PostgreSQL\17\bin\psql.exe" -U postgres
