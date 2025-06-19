@@ -1,5 +1,10 @@
 # Steps i did in the Database
 
+**initialize the database**
+- sudo -iu postgres
+- initdb --locale=$LANG -E UTF8 -D /var/lib/postgres/data
+- exit
+
 **1. Create the user**
 - CREATE USER dost WITH PASSWORD 'd0stregi0n1' CREATEDB;
 
