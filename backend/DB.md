@@ -36,3 +36,13 @@
 
 **Delete Row in table**
 - DELETE FROM name WHERE school_id = 1;
+
+
+# Just in case i forget jahahha 
+    | Task           | Command                                                 |
+    | -------------- | ------------------------------------------------------- |
+    | Check status   | `systemctl status postgresql.service`                   |
+    | Check logs     | `journalctl -xeu postgresql.service`                    |
+    | Init database  | `sudo -iu postgres && initdb -D /var/lib/postgres/data` |
+    | Fix ownership  | `sudo chown -R postgres:postgres /var/lib/postgres`     |
+    | Enable & Start | `sudo systemctl enable --now postgresql`                |
