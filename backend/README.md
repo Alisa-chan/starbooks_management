@@ -16,6 +16,7 @@
 - npm install express pg cors
 - npm install bcrypt
 - npm install jsonwebtoken
+- npm install dotenv
 
 
 
