@@ -34,12 +34,28 @@ VALUES ('it@gmail.com', 'it123', 'it');
 
 -- Initial 
 CREATE TABLE name (
-    school_id SERIAL PRIMARY KEY,
-    school_name VARCHAR(255) NOT NULL,
+    id SERIAL PRIMARY KEY,
+    INSTITUTIONAL_NAME VARCHAR(255) NOT NULL,
     address TEXT NOT NULL,
-    phone_number VARCHAR(20),
-    province VARCHAR(100),
-    municipality VARCHAR(100),
-    unit_code VARCHAR(50),
-    established_year INT CHECK (established_year >= 1800 AND established_year <= EXTRACT(YEAR FROM CURRENT_DATE))
+    RECIPIENT_NAME VARCHAR(100),
+    INSTITUTION_TYPE VARCHAR(255),
+    I_CODE VARCHAR(50),
+    EMAIL_ADD VARCHAR(255) NOT NULL UNIQUE,
+    CONTACT_NUMBER VARCHAR(20), 
+    PROVINCE VARCHAR(100),
+    DATE_OF_DEPLOYMENT DATE NOT NULL,  -- <== (YYYY-MM-DD)
+    YEAR_DISTRIBUTED_NUMBER INT CHECK (established_year >= 1800 AND established_year <= EXTRACT(YEAR FROM CURRENT_DATE))
+);
+
+
+
+-- file initial 
+CREATE TABLE files (
+    id SERIAL PRIMARY KEY,
+    name_id INTEGER NOT NULL REFERENCES name(id) ON DELETE CASCADE,
+    filename TEXT NOT NULL,
+    filetype TEXT,
+    filepath TEXT,        -- For local storage 
+    fileurl TEXT,         -- For cloud storage 
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
