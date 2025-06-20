@@ -3,6 +3,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
+const AddMouRoutes = require("./routes/AddMou"); // 👈 import
+
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ app.use(express.json());
 // Routes
 app.use("/auth", authRoutes);
 app.use("/dashboard", dashboardRoutes);
+app.use("/api/AddMou", AddMouRoutes); // 👈 new route
+
 
 // Root route
 app.get("/", (req, res) => {

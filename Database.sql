@@ -33,20 +33,24 @@ VALUES ('it@gmail.com', 'it123', 'it');
 
 
 -- Initial 
-CREATE TABLE name (
+CREATE TABLE AddMou (
     id SERIAL PRIMARY KEY,
-    INSTITUTIONAL_NAME VARCHAR(255) NOT NULL,
+    institutional_name VARCHAR(255) NOT NULL,
     address TEXT NOT NULL,
-    RECIPIENT_NAME VARCHAR(100),
-    INSTITUTION_TYPE VARCHAR(255),
-    I_CODE VARCHAR(50),
-    SEX VARCHAR (20)
-    EMAIL_ADD VARCHAR(255) NOT NULL UNIQUE,
-    CONTACT_NUMBER VARCHAR(20), 
-    PROVINCE VARCHAR(100),
-    DATE_OF_DEPLOYMENT DATE NOT NULL,  -- <== (YYYY-MM-DD)
-    YEAR_DISTRIBUTED_NUMBER INT CHECK (established_year >= 1800 AND established_year <= EXTRACT(YEAR FROM CURRENT_DATE))
+    recipient_name VARCHAR(100),
+    institution_type VARCHAR(255),
+    i_code VARCHAR(50),
+    sex VARCHAR(20),
+    email_add VARCHAR(255) NOT NULL UNIQUE,
+    contact_number VARCHAR(20), 
+    province VARCHAR(100),
+    date_of_deployment DATE NOT NULL,
+    year_distributed_number INT CHECK (
+        year_distributed_number >= 1800 
+        AND year_distributed_number <= EXTRACT(YEAR FROM CURRENT_DATE)
+    )
 );
+
 
 
 
